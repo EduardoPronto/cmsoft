@@ -11,16 +11,17 @@
     <meta property="og:type" content="website">
     <title>CM SOFT — Soluções Inteligentes com IA</title>
 
-    <!-- Meta Pixel Code (CORRIGIDO) -->
+    <!-- META PIXEL -->
     <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
     n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';
     n.queue=[];t=b.createElement(e);t.async=!0;
     t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
+    s.parentNode.insertBefore(t,s)}
+    (window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
 
     fbq('init', '1679672239718416');
     fbq('track', 'PageView');
@@ -30,12 +31,27 @@
         <img height="1" width="1" style="display:none"
         src="https://www.facebook.com/tr?id=1679672239718416&ev=PageView&noscript=1"/>
     </noscript>
-    <!-- End Meta Pixel Code -->
 
+    <!-- GOOGLE TAG (GA4 + GOOGLE ADS) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-17J7CVEG7D"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+
+      gtag('js', new Date());
+
+      // Google Analytics
+      gtag('config', 'G-17J7CVEG7D');
+
+      // Google Ads
+      gtag('config', 'AW-17480877751');
+    </script>
+
+    <!-- FONTES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <style>
         /* ============================================
            CSS RESET & VARIABLES
