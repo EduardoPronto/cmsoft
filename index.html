@@ -1544,6 +1544,30 @@
                 }
             });
         });
+        /* TRACKING PROFISSIONAL (GTM + META) - VERSÃO BLINDADA */
+document.querySelectorAll('.whatsapp-btn').forEach(btn => {
+    btn.addEventListener('click', function () {
+        const source = this.getAttribute('data-source') || 'botão_desconhecido';
+
+        // 1. Disparo para o Google Tag Manager (DataLayer)
+        if (typeof dataLayer !== 'undefined') {
+            dataLayer.push({
+                'event': 'whatsapp_click',
+                'source': source
+            });
+        }
+
+        // 2. Disparo para o Meta Pixel (Com Verificação de Segurança)
+        if (typeof fbq !== 'undefined') {
+            fbq('track', 'Contact', { 
+                content_name: 'Clique WhatsApp', 
+                source: source 
+            });
+        } else {
+            console.warn('Meta Pixel não carregou. O link abrirá normalmente.');
+        }
+    });
+});
     </script>
 </body>
 </html>
